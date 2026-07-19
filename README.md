@@ -13,7 +13,8 @@ JavaScript fundamentals ko strong karna aur SDE/placement interviews ke liye tay
 | 02 | Data Types | [02_data_types.js](./02-data-types.js) |
 | 03 | Operators | [03_operators.js](./03-operators.js) |
 | 04 | Conditional Statements | [04_conditional_statements.js](./04-conditional-statements.js) |
-| 05 | Strings & String Methods | [05_strings.js](./05-strings.js) |
+| 05 | Strings & String Methods | [05_strings_methods.js](./05-strings.js) |
+| 06 | Number,math library & date and time methods | [06_maths_dateTime_methods.js](./05-strings.js) |
 
 ## 📌 Status
 🟢 In Progress — daily updates
