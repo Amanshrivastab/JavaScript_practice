@@ -9,11 +9,11 @@ JavaScript fundamentals ko strong karna aur SDE/placement interviews ke liye tay
 
 | No. | Topic | File |
 |-----|-------|------|
-| 01 | Variables & Constants | [01-variables-constants.js](./01-variables-constants.js) |
-| 02 | Data Types | [02-data-types.js](./02-data-types.js) |
-| 03 | Operators | [03-operators.js](./03-operators.js) |
-| 04 | Conditional Statements | [04-conditional-statements.js](./04-conditional-statements.js) |
-| 05 | Strings & String Methods | [05-strings.js](./05-strings.js) |
+| 01 | Variables & Constants | [01_variable_constants.js](./01-variables-constants.js) |
+| 02 | Data Types | [02_data_types.js](./02-data-types.js) |
+| 03 | Operators | [03_operators.js](./03-operators.js) |
+| 04 | Conditional Statements | [04_conditional_statements.js](./04-conditional-statements.js) |
+| 05 | Strings & String Methods | [05_strings.js](./05-strings.js) |
 
 ## 📌 Status
 🟢 In Progress — daily updates
