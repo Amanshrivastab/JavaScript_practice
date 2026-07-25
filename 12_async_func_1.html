@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count down timer </title>
+</head>
+<body>
+    <h1 id="display">10</h1>
+    <button id="startbtn">Start</button>
+    <button id="stopbtn">Stop</button>
+    <button id="resetbtn">Reset</button>
+    <script >
+        let timeout = 10;
+        let intervalid = null;
+        const display = document.getElementById("display");
+
+        function startTime (){
+            if (intervalid !== null) return ;  // already run then not start again
+            intervalid = setInterval(()=>{
+                timeout--;
+                if(timeout <= 0){
+                    clearInterval (intervalid);//close interval after time ends 
+                    intervalid = null;
+                    display.textContent = "Time`s up";
+                    return;
+                }
+                display.textContent = timeout;
+                
+
+            },1000);
+        }
+        function stopTimer(){
+            clearInterval(intervalid);
+            intervalid = null;
+        }
+        function  resetTimer(){
+            clearInterval (intervalid);
+            intervalid = null;
+            timeout = 10;
+            display.textContent = timeout;
+        }
+        document.getElementById("startbtn").addEventListener("click",startTime);
+        document.getElementById("stopbtn").addEventListener("click",stopTimer);
+        document.getElementById("resetbtn").addEventListener("click",resetTimer);
+
+    </script>
+</body>
+</html>
