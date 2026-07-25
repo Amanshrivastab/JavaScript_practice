@@ -89,3 +89,15 @@ document.getElementById("parent").addEventListener("click",(e=>{
 const myEvent = new CustomEvent("myEvent",{detail:{msg:"hellow"}});
 document.dispatchEvent(myEvent);
 //18.timestamp gap between clicks
+let lastClick = 0;
+document.getElementById("btn").addEventListener("click",(e)=>{
+    console.log("gap:",e.timeStamp-lastClick,"ms");
+    lastClick = e.timeStamp;
+});
+//20. All concepts togather
+document.getElementById("parent").addEventListener("click",(e)=>{
+    console.log("type",e.type);
+    console.log("target",e.target);
+    console.log("cuurent target", e.currentTarget);
+    console.log("default prevented ",e.defaultPrevented);
+});
