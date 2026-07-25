@@ -18,6 +18,8 @@ JavaScript fundamentals ko strong karna aur SDE/placement interviews ke liye tay
 | 07 | Objects and  its methods  | [07_object_methods.js](./07_object_methods.js) |
 | 08 | Loops and higher order looping function | [08_loops_methods.js](./08_loops_methods.js) |
 | 09 | Array and its methods| [09_arrays_methods.js](./09_arrays_methods.js) |
+| `10_DOM_index.html` | Main HTML file for the DOM project. |
+| `10_DOM_manipulation.js` | JavaScript file containing DOM manipulation functions. | 
 
 ## 📌 Status
 🟢 In Progress — daily updates
