@@ -1,6 +1,6 @@
 
-<!--frist example on async  for countdown timer--> 
-<!-- 
+<!-- frist example on async for countdown timer --> 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,9 +13,16 @@
     <button id="startbtn">Start</button>
     <button id="stopbtn">Stop</button>
     <button id="resetbtn">Reset</button>
+    <br/>
+    <br/>
+    <!--  html for popup notification -->
+    <button id="showbtn"> Show Notification </button>
+    <button id="cancelbtn"> canceal Auto-hide</button>
+    <div id="toast" style="display: none;"> Task Saved Successfully</div>
     <script >
         let timeout = 10;
         let intervalid = null;
+       
         const display = document.getElementById("display");
 
         function startTime (){
@@ -47,25 +54,29 @@
         document.getElementById("stopbtn").addEventListener("click",stopTimer);
         document.getElementById("resetbtn").addEventListener("click",resetTimer);
 
+
+
+        // js for second project 
+
+        const toast =  document.getElementById("toast");
+        let timeoutId = null;
+        function showTest(){
+            toast.style.display="block";
+            clearTimeout(timeoutId);
+            timeoutId = setTimeout(() => {
+                toast.style.display="none";
+                timeoutId = null;
+            }, 3000);
+            function cancelHide(){
+                clearTimeout(timeoutId);
+                timeoutId = null;
+                console.log("auto-hide cancealled");
+            }
+            document.getElementById("showbtn").addEventListener("click",showTest);
+            document.getElementById("cancelbtn").addEventListener("click",cancelHide);
+        }
     </script>
 </body>
-</html> -->
-<!-- second example for popup notification of async-->
+</html> 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notification popup </title>
-</head> 
-<body>
-    <button id="showbtn"> Show Notification </button>
-    <button id="cancelbtn"> canceal Auto-hide</button>
-    <div id="toast" style="display: none;"> Task Saved Successfully</div>
-
-    <script>
-      
-    </script>
-</body>
-</html>
+ 
