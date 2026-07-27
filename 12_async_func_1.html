@@ -67,14 +67,16 @@
                 toast.style.display="none";
                 timeoutId = null;
             }, 3000);
+        }
             function cancelHide(){
                 clearTimeout(timeoutId);
+                toast.style.display="none";
                 timeoutId = null;
                 console.log("auto-hide cancealled");
             }
             document.getElementById("showbtn").addEventListener("click",showTest);
             document.getElementById("cancelbtn").addEventListener("click",cancelHide);
-        }
+        
     </script>
 </body>
 </html> 
