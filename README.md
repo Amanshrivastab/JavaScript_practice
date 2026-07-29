@@ -20,6 +20,10 @@ JavaScript fundamentals ko strong karna aur SDE/placement interviews ke liye tay
 | 09 | Array and its methods| [09_arrays_methods.js](./09_arrays_methods.js) |
 | `10_DOM_index.html` | Main HTML file for the DOM project. |
 | `10_DOM_manipulation.js` | JavaScript file containing DOM manipulation functions. | 
+| `11_Events.html` | html file for implement the events. |
+| `10_Events.js` | JavaScript file for implement the events methods . | 
+| 12 | Async function implementation | [12_async_func_1.html] |
+| 13 |Promise and fetch | [12_promise.js](./13_promise.js) |
 
 ## 📌 Status
 🟢 In Progress — daily updates
