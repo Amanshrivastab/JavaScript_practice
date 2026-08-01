@@ -115,6 +115,75 @@ class electricBike extends Vehicle{
     }
 }
 
+//4. class  for the example three - polymorphism 
+class Shape {
+    area(){
+        console.log("this is a function for area .");
+    }
+}
+class Circle  extends Shape {
+    constructor(radius){
+        super();
+        this.radius = radius;
+    }
+    area(){
+        const result = Math.PI*this.radius**2;
+        console.log("the area of a circle : ",(result.toFixed(2)));
+    }
+}
+class Ractangle extends Shape{
+    constructor(width , height){
+        super();
+        this.width = width;
+        this.height = height;
+    }
+    area(){
+        console.log(`Area of ractangle : ${this.height * this.width}`);
+    }
+
+}
+class Triangle extends Shape {
+    constructor(base , height ){
+        super();
+        this.base = base ;
+        this.height = height;
+    }
+    area(){
+        console.log(` Area of triangle : ${this.base * this.height /2}`);
+    }
+}
+
+//5. class for the exapmle 5 - Abstraction 
+class PaymenPathWay {
+    constructor(){
+        if(this.constructor === PaymenPathWay){
+            throw new Error(`paymentpathway is not directly accesible `);
+        }
+    }
+    processPayment (amount){  // abstract method
+        throw new Error("define proccesspayment method in the child class");
+    }
+
+    initiate(amount){
+        console.log("payment is initiating ",amount);
+        this.processPayment(amount);
+        console.log("payment completed ");
+    }
+
+}
+class UpiPayment extends PaymenPathWay{
+    processPayment(amount){
+        console.log(`payment ${amount} is in proccesssing through UPI`);
+    }
+}
+class CardPayment extends PaymenPathWay{
+    processPayment(amount){
+        console.log(`payment ${amount} is in proccesssing through Card`);
+    }
+}
+
+
+
 // class call for example one( student )
 const s1 = new Student("Aman" , 78);
 const s2 = new Student("Rahul" , 87);
@@ -143,3 +212,19 @@ myCar.honk();
 console.log(" --- ");
 const myBike = new electricBike("ola" , 90 , "180km");
 myBike.info();
+
+// class object call for the example 4
+const myShape = new Shape();
+myShape.area();
+const myCircle = new Circle(5);
+myCircle.area();
+const myRactangle = new Ractangle(4,6);
+myRactangle.area();
+const myTriangle = new Triangle( 6 , 5);
+myTriangle.area();
+
+// class object call for the example 5
+   const upipay = new UpiPayment();
+   upipay.initiate(499);
+   const cardpay = new CardPayment();
+   cardpay.initiate(599);
