@@ -24,6 +24,7 @@ JavaScript fundamentals ko strong karna aur SDE/placement interviews ke liye tay
 | `10_Events.js` | JavaScript file for implement the events methods . | 
 | 12 | Async function implementation | [12_async_func_1.html] |
 | 13 |Promise and fetch | [12_promise.js](./13_promise.js) |
+| 14 | oops concept in java script | [14_OOP_concepts.js](./14_OOP_concepts.js) |
 
 ## 📌 Status
 🟢 In Progress — daily updates
