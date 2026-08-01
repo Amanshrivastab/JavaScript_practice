@@ -41,6 +41,81 @@ class Student {
 
 }
 
+
+
+//2. Encapsulation - wrapup the data into one class 
+class BankAccount{
+    #Balence;
+    constructor(owner , initialBalence = 0){
+        this.owner = owner;
+        this.#Balence = initialBalence;
+    }
+
+    deposit(amount){
+        if( amount <= 0 ){
+            console.log("deposit a positve amount , procces failed ");
+            return;
+        }
+        this.#Balence += amount;
+        console.log(`${amount} deposit successfully , current balence ${this.#Balence}`);
+    }
+
+    withdraw(amount){
+        if(amount >this.#Balence || amount <=0){
+            console.log("insuffient balence ! please enter a valid money ");
+            return;
+        }
+        this.#Balence -= amount;
+        console.log(`${amount} withdraw successfully , current balence ${this.#Balence}`)
+    }
+
+    get getBalence(){
+        return this.#Balence;
+    }
+}
+
+//3. Inhertance - child class inherit the properties and methods of parent class
+class Vehicle{
+    constructor(brand, speed){
+        this.brand = brand;
+        this.speed = speed;
+    }
+
+    info(){
+        console.log(` Brand :${this.brand} top speed of vehicle ${this.speed}.`);
+    }
+    honk(){
+        console.log("Beep Beep!");
+    }
+}
+
+class Car extends Vehicle{
+     constructor(brand , speed , doors){
+        super(brand,speed );
+        this.doors = doors;
+     }
+
+     info(){
+        super.info();
+        console.log(`this car has ${this.doors}`);
+     }
+     
+} 
+
+class electricBike extends Vehicle{
+
+    constructor(brand, speed , batteryRange){
+        super(brand,speed);
+        this.batteryRange = batteryRange;
+    }
+
+    info(){
+        super.info();
+        console.log(` battery range is ${this.batteryRange}`);
+    }
+}
+
+// class call for example one( student )
 const s1 = new Student("Aman" , 78);
 const s2 = new Student("Rahul" , 87);
 
@@ -53,3 +128,18 @@ s1.introduce();
 
 Student.collageInfo();
 
+// class call for example 2 (Bank Account )
+const x1 = new BankAccount("Aman " , 1000);
+ x1.deposit(1000);
+x1.withdraw(500);
+console.log("Final balence ", x1.getBalence);
+
+
+// class object call for the example 3 
+const myCar = new Car("tata ", 110, 5);
+myCar.info();
+myCar.honk();
+
+console.log(" --- ");
+const myBike = new electricBike("ola" , 90 , "180km");
+myBike.info();
